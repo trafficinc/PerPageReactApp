@@ -48,8 +48,11 @@ module.exports = (env, argv) => ({
             presets: [
               "@babel/preset-env",
               "@babel/preset-react",
-              { plugins: ["@babel/plugin-proposal-class-properties"] }
-            ]
+              { targets: browsers },
+            ],
+            plugins: [
+              "@babel/plugin-proposal-class-properties"
+            ],
           }
         }
       },
